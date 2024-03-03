@@ -1,5 +1,5 @@
 """Import the calculate_balance_interest function from the utils.py file."""
-from utils import calculate_balance_interest
+from utils import calculate_new_balance_interest
 """Import the Account class from the Account.py file."""
 from Account import Account
 
@@ -23,7 +23,7 @@ def create_savings_account(balance, interest_rate, months):
     savings_account = Account(balance, interest_earned)
 
     # Calculate interest earned and new account balance
-    (balance, interest_earned) = calculate_balance_interest(balance, interest_rate, months)
+    (balance, interest_earned) = calculate_new_balance_interest(balance, interest_rate, months)
 
     # Pass the updated_balance to the set balance method using the instance of the SavingsAccount class.
     savings_account.set_balance(balance)

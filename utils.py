@@ -46,7 +46,7 @@ def prompt_user(prompt, return_type):
 
     return user_input
 
-def calculate_balance_interest(account_balance, apr, months):
+def calculate_new_balance_interest(account_balance, apr, months):
     ''' Calculates the interest earned and the updated balance.
     
     Args:
@@ -63,7 +63,7 @@ def calculate_balance_interest(account_balance, apr, months):
      # Calculate interest earned
     interest_earned = account_balance * (apr/100 * months/12)
 
-    # Update the balance by adding the interest earned to the initial balance
-    updated_account_balance = account_balance + interest_earned
+    # Update the balance by adding the interest earned to the original balance
+    account_balance += interest_earned
 
-    return updated_account_balance, interest_earned
+    return account_balance, interest_earned
