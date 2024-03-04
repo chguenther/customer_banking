@@ -20,10 +20,10 @@ Tasks:
 ### Pattern Recognition
 1. The user can create two bank accounts with different account balances, APRs, and maturities for each.
 2. The amount of interest earned is calculated using the following formula[^1]:
-   
-   $$
+
+   ```math
    interest\_earned = initial\_balance * (APR/100 * maturity/12)
-   $$
+   ```
 
    The new account balance is the sum of the initial account balance and the amount of interest earned.
 3. The solution prints the new account balances and the amounts of interest earned in thousands notation and to two decimal places.
