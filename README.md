@@ -79,6 +79,11 @@ The `utils.py` module defines the following utility functions:
     Calculates the amount of interest earned and the new balance.
     It takes the initial balance (`float`), APR (`float`), and maturity (`int`) as inputs and returns a tuple of the new balance and the amount of interest earned.
 
+[!Note]
+This solution needs to be further modularized. The functions `create_savings_account` and `create_cd_account` are essentially "copy and paste" versions of each other. This is poor design and programming practice.
+One better design is to use one function called `create_bank_account` that uses an input parameter for the type of the bank account (i.e., "Savings" or "CD") to be created.
+Another design is to use inheritance and define bank accounts of different types that inherit the properties of the `Account` class.
+I did not implement any of these approaches since that would have gone against the solution prescribed in the challenge instructions.
 ---
 
 ## Footnotes
