@@ -14,8 +14,9 @@ def is_float(str):
     return str.replace(".","",1).isdigit()
 
 def prompt_user(prompt, return_type):
-    '''Prompts for user input, checks that user input is valid and returns user_input
-        in a data type that corresponds to 'return_type'.
+    '''Prompts for user input, strips leading and trailing whitespaces from user
+        input, checks that user input is valid and returns user_input in a data
+        type that corresponds to 'return_type'.
 
     Args:
         prompt (str): Prompt string to ask the user for input.
@@ -26,20 +27,29 @@ def prompt_user(prompt, return_type):
     '''
 
     while True:
+        # Get user input
         user_input = input(prompt)
+
+        # Strip leading or trailing whitespace from user input.
+        user_input = user_input.strip()
+
+        # Check for valid input depending on return data type
         match return_type:
+            # If we need to return a float...
             case 'float':
                 if is_float(user_input):
                     user_input = float(user_input)
                     break
                 else:
                     print(f"Your input, '{user_input}', is invalid.")
+            # If we need to return an int...
             case 'int':
                 if user_input.isdigit():
                     user_input = int(user_input)
                     break
                 else:
                     print(f"Your input, '{user_input}', is invalid.")
+            # Unknown return data type...
             case _:
                 print(f"Unknown data type, '{return_type}'.")
                 exit()

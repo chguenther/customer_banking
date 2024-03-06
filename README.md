@@ -72,7 +72,7 @@ The `utils.py` module defines the following utility functions:
 1. `is_float`:
    Takes a string as an input and uses the `replace` and `isdigit` Python functions to detrmine whether the input string can be converted to a floating point number. Returns `True` if it can be converted and `False` if it cannot be converted.
 2. `prompt_user`:
-   Prompts for user input, checks that the user input is valid and returns the user input with the correct data type.
+   Prompts for user input, removes any leading or trailing whitespace[^2], checks that the user input is valid and returns the user input with the correct data type.
    The function takes two strings as input. The first string specifies the user prompt, the second string specifies the data type of the return value.
    It uses `is_float` if the user input is supposed to be returned as a `float`.
 3. `calculate_new_balance_interest`:
@@ -88,3 +88,4 @@ The `utils.py` module defines the following utility functions:
 
 ## Footnotes
 [^1]: I learned how to embed formulas in markdown text from GitHub Docs (2024). *Writing mathematical expressions*, https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions as accessed on 3/3/2024.
+[^2]: Dionysia Lemonaki, freeCodeCamp, (MARCH 3, 2023). *Trim a String in Python – How to Strip Trailing Whitespace*, https://www.freecodecamp.org/news/how-to-strip-trailing-whitespace-in-python/ as accessed on 3/6/2024.
